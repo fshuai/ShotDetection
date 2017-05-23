@@ -226,7 +226,7 @@ public class ShotCut {
                 }
             }
         }
-        System.out.println("ncount:"+nCount);
+        //System.out.println("ncount:"+nCount);
         return (double)nCount/(height*width);
     }
 
@@ -335,6 +335,8 @@ public class ShotCut {
             }
             else{
                 //计算帧间差
+                hist curhist=new hist(img);
+                curHistData=curhist.getHist();
                 double curDiff = calFrameHistDiff( preHistData, curHistData);
 
                 ////保存帧间差
